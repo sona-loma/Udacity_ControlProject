@@ -162,8 +162,6 @@ V3F QuadControl::RollPitchControl(V3F accelCmd, Quaternion<float> attitude, floa
   Mat3x3F R = attitude.RotationMatrix_IwrtB();
 
   ////////////////////////////// BEGIN STUDENT CODE ///////////////////////////
-  
-  
   //https://knowledge.udacity.com/questions/204405
   // Here, we will use the equations in pic """Con_equations19""" to get: p_command and q_command
   {
@@ -192,8 +190,6 @@ V3F QuadControl::RollPitchControl(V3F accelCmd, Quaternion<float> attitude, floa
       pqrCmd.y = q_cmd;
       pqrCmd.z = 0.f;
   }
-
-
 
   /////////////////////////////// EN+D STUDENT CODE ////////////////////////////
 
@@ -224,7 +220,7 @@ float QuadControl::AltitudeControl(float posZCmd, float velZCmd, float posZ, flo
   float thrust = 0;
 
   ////////////////////////////// BEGIN STUDENT CODE ///////////////////////////
-  
+  //https://knowledge.udacity.com/questions/270051
 
 
 
@@ -280,7 +276,7 @@ V3F QuadControl::LateralPositionControl(V3F posCmd, V3F velCmd, V3F pos, V3F vel
   V3F accelCmd = accelCmdFF;
 
   ////////////////////////////// BEGIN STUDENT CODE ///////////////////////////
-  
+  //https://knowledge.udacity.com/questions/270051
 
 
 
@@ -313,7 +309,7 @@ float QuadControl::YawControl(float yawCmd, float yaw)
 
   float yawRateCmd=0;
   ////////////////////////////// BEGIN STUDENT CODE ///////////////////////////
-  //got a hint from https:/knowledge.udacity.com/questions/311735
+  //https:/knowledge.udacity.com/questions/311735
 
 
   float yaw_sub = fmodf(yaw, 2 * F_PI);
